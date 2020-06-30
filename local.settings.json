@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "powershell",
+    "VmAutoStopStart_tenantId": "azure-ad-tenant-id",
+    "VmAutoStopStart_appId": "service-principal-id",
+    "VmAutoStopStart_appSecret": "service-principal-secret",
+    "PowerBiEmbeddedAutoscale_appId": "service-principal-id",
+    "PowerBiEmbeddedAutoscale_appSecret": "service-principal-secret",
+    "PowerBiEmbeddedAutoscale_tenantId": "azure-ad-tenant-id",
+    "SqlDatabaseAutoscale_appId": "service-principal-id",
+    "SqlDatabaseAutoscale_appSecret": "service-principal-secret",
+    "SqlDatabaseAutoscale_tenantId": "azure-ad-tenant-id",
+    "zabbixUserName": "zabbix-user-name",
+    "zabbixUserPassword": "zabbix-user-password",
+    "AzureWebJobs.VmAutoStopStart.Disabled": "false"
+  }
+}
