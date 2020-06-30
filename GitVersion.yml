@@ -1,0 +1,25 @@
+mode: Mainline
+assembly-versioning-scheme: MajorMinorPatch
+next-version: 0.0
+increment: Minor
+commit-date-format: 'yyyy-MM-dd'
+commit-message-incrementing: Enabled
+assembly-informational-format: '{Major}.{Minor}.{Patch}+{CommitsSinceVersionSource}.{BranchName}.{ShortSha}'
+branches:
+  master:
+    tag: ''
+    increment: Minor
+    prevent-increment-of-merged-branch-version: true
+    is-release-branch: true
+    is-source-branch-for: ['feature']
+  feature:
+    regex: (feature-)
+    tag: ''
+    increment: Patch
+    prevent-increment-of-merged-branch-version: false
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: false
+    source-branches: ['master']
+ignore:
+  sha: []

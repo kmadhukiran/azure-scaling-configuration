@@ -1,0 +1,26 @@
+/*
+  scheduleTimeZone:
+    Time Zone of time slots in 'schedule'
+    Available time zones: [System.TimeZoneInfo]::GetSystemTimeZones()
+  
+  schedule:
+    JSON object (escaped) describing state of the VM during various time periods.
+    Example: [{WeekDays:[1,2,3,4,5], StartTime:\"01:00:00\", StopTime:\"19:30:00\", State: \"VM deallocated\"}]
+  
+  defaultState:
+    Default state of the VM if not covered by any of time periods in 'schedule'.
+    Allowed values: 'VM deallocated', 'VM running'.
+*/
+
+/*
+  version: #{GitVersion_InformationalVersion}#
+*/
+
+[
+  {
+    "name": "vm-name",
+    "defaultState": "VM deallocated",
+    "scheduleTimeZone": "Eastern Standard Time",
+    "schedule": "[{WeekDays:[1,2,3,4,5], StartTime:\"01:00:00\", StopTime:\"19:30:00\", State: \"VM deallocated\"}]"
+  }
+]

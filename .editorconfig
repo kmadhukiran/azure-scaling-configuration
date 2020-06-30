@@ -1,0 +1,9 @@
+[*.json]
+indent_style = space
+indent_size = 2
+preserve_newlines = true
+
+[*.jsonc]
+indent_style = space
+indent_size = 2
+preserve_newlines = true

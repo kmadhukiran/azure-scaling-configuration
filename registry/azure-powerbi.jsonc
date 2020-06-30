@@ -1,0 +1,26 @@
+/*
+  scheduleTimeZone:
+    Time Zone of time slots in 'schedule'
+    Available time zones: [System.TimeZoneInfo]::GetSystemTimeZones()
+  
+  schedule:
+    JSON object (escaped) describing state of the PowerBi Embedded during various time periods.
+    Example: [{WeekDays:[1,2,3,4,5], StartTime:\"01:00:00\", StopTime:\"19:30:00\", Sku: \"A2\"}]
+  
+  defaultState:
+    Default state of the PowerBi Embedded if not covered by any of time periods in 'schedule'.
+*/
+
+/*
+  version: #{GitVersion_InformationalVersion}#
+*/
+
+[
+  {
+    "name": "enpuscdevngppbi01",
+    "subscriptionId": "azure-subscription-id",
+    "defaultSku": "A1",
+    "scheduleTimeZone": "Eastern Standard Time",
+    "schedule": "[{WeekDays:[1,2,3,4,5], StartTime:\"08:00:00\", StopTime:\"19:00:00\", Sku: \"A2\"}]"
+  }
+]

@@ -1,0 +1,36 @@
+/*
+  scheduleTimeZone:
+    Time Zone of time slots in 'schedule'
+    Available time zones: [System.TimeZoneInfo]::GetSystemTimeZones()
+  
+  defaultEdition:
+    Azure SQL Database Edition that will be used outside the slots
+    specified in the scalingSchedule paramater value.
+    Available values: Basic, Standard, Premium.
+  
+  defaultTier:
+    Azure SQL Database Tier that will be used outside the slots
+    specified in the scalingSchedule paramater value.
+    Example: Basic, S0, S1, S2, S3, P1, P2, P4, P6, P11, P15.
+
+  schedule:
+    JSON object (escaped) describing state of the SQL database during various time periods.
+    Example: [{WeekDays:[1,2,3,4,5], StartTime:\"01:00:00\", StopTime:\"19:30:00\", Edition: \"Standard\", Tier: \"S6\"}]
+*/
+
+/*
+  version: #{GitVersion_InformationalVersion}#
+*/
+
+[
+  {
+    "name": "database-name",
+    "server": "server-name",
+    "resourceGroup": "resourceGroup-name",
+    "subscriptionId": "azure-subscription-id",
+    "defaultEdition": "Standard",
+    "defaultTier": "S0",
+    "scheduleTimeZone": "Eastern Standard Time",
+    "schedule": "[{WeekDays:[1,2,3,4,5], StartTime:\"08:00:00\", StopTime:\"19:00:00\", Edition: \"Standard\", Tier: \"S6\"}]"
+  }
+]
